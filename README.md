@@ -23,6 +23,7 @@ graph TD
 
     subgraph AWSServices["AWS Services"]
         RedisPod["Redis Cache (ElastiCache Sim)"]
+        OtherServices["Other AWS Services<br/>(RDS, DynamoDB, etc.)"]
     end
     
     NodeAgent -->|Forward OTLP| CollectorGateway["Collector Gateway (Autoscaled Deployment)"]

@@ -26,7 +26,7 @@ graph TD
     end
     
     NodeAgent -->|Forward OTLP| CollectorGateway["Collector Gateway (Autoscaled Deployment)"]
-    CollectorGateway -->|Scrape Metrics / Redis Protocol| RedisPod
+    RedisPod -->|Scrape Metrics / Redis Protocol| CollectorGateway
     CollectorGateway -->|Export Telemetry| Backends["Datadog / Dynatrace /<br/>Grafana LGTM / other OTel-compliant backends"]
 ```
 
